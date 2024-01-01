@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pokemon hollow';
+    src: url('../fontes/Pokemon Hollow.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Pokemon solid';
+    src: url('../fontes/Pokemon Solid.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #FFCC01;
+    --cor2: #2D6AB4;
+
+    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-pokemon1: 'Pokemon hollow', cursive;
+    --fonte-pokemon2: 'Pokemon solid', cursive;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color:var(--cor1);
+    font-family: var(--fonte-padrão);
+    background-image: url('/imagens/pokes.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #3577c7c5, var(--cor2));
+    min-height: 150px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid var(--cor1);
+}
+
+header img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: #2d6ab4de;
+    /* background-color: var(--cor2); */
+    padding: 20px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.425);
+    text-align: center; 
+    position: fixed;
+    width: 100%;
+}
+
+nav > a {
+    color:var(--cor1);
+    padding: 20px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    background-color:var(--cor1);
+    color: var(--cor2);
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 50px;
+    background-color: #3577c7f8;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.411);
+    border-radius: 0px 0px 10px 10px;
+}
+
+main h1 {
+    color: var(--cor1);
+    font-weight: normal;
+    font-family: var(--fonte-pokemon2);
+    font-size: 1.8em;
+    text-shadow: 1px 1px 5px var(--cor2);
+}
+
+main h2 {
+    font-family: var(--fonte-pokemon2);
+    color: var(--cor1);
+    font-size: 1.5em;
+    font-weight: normal;
+    text-indent: 8px;
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.253);
+}
+
+main img {
+    width: 100%;
+}
+
+main img.ilust {
+    max-width: 400px;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--cor2);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
