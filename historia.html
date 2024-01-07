@@ -6,22 +6,23 @@
     <title>História do Pokemon</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" type="text/css" href="estilos/text.css">
 </head>
 <body>
-    <nav>
-        <a class="logo" href="#">Pokemon</a>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="historia.html">Historia</a></li>
-          <li><a href="#">Pokedex</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
+    <header id="header">
+        <a data-text="Pokemon" class="logo" href="#">Pokemon</a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+              <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="historia.html">Historia</a></li>
+              <li><a href="/">Pokedex</a></li>
+              <li><a href="/">Sobre</a></li>
+            </ul>
+          </nav>
+      </header>
     <main>
         <article>
             <h2>Primeira geração</h2>
@@ -45,9 +46,14 @@
             <img src="imagens/Pokemon_Stadium_Nintendo_Switch_Online_12_de_abril.jpg" class="ilust">
         </article>
     </main>
-    <script src="mobile-navbar.js"></script>
+    <script src="script.js"></script>
     <footer>
-        <p>Site criado por <a href="https://github.com/mfrancisco991" target="_blank">Marcos</a>.</p>
+        <div>
+          <p>Site criado por <a href="https://github.com/mfrancisco991" target="_blank">Marcos</a>.</p>
+        </div>
+        <div class="footright">
+          <a class="top" href="#">/\</a>
+        </div>
     </footer>
 </body>
 </html>

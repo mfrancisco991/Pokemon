@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pokemon hollow';
+    src: url('../fontes/Pokemon Hollow.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Pokemon solid';
+    src: url('../fontes/Pokemon Solid.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+    --fonte-pokemon1: 'Pokemon hollow', cursive;
+    --fonte-pokemon2: 'Pokemon solid', cursive;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-family:var(--fonte-pokemon2);
+    position: relative;
+    font-size: 2em;
+    color: #333;
+}
+
+.logo::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #FFCC01;
+    width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    /*border-right: 2.5px solid #FFCC01;*/
+    animation: animarElemento 5s linear infinite;
+    filter: drop-shadow(0 0 10px #FFCC01) drop-shadow(0 0 15px #ffcc01c5);
+}
+
+@keyframes animarElemento {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
