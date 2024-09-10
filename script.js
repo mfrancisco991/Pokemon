@@ -15,3 +15,16 @@ function toggleMenu(event) {
 
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+var msgCookie = document.getElementById('cookie')
+
+function aceito() {
+  localStorage.lgpd = "sim"
+  msgCookie.classList.remove('mostrar')
+}
+
+if(localStorage.lgpd == 'sim'){
+  msgCookie.classList.remove('mostrar')
+}else{
+  msgCookie.classList.add('mostrar')
+}

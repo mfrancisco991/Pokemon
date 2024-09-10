@@ -13,13 +13,13 @@
 }
 
 :root {
-    --cor0: #c5ebd6;
-    --cor1: #FFCC01;
-    --cor2: #2D6AB4;
+  --cor-fundo: #FFCC01;
+  --cor-destaque: #2D6AB4;
+  --cor-texto: #ffffff;
 
-    --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-pokemon1: 'Pokemon hollow', cursive;
-    --fonte-pokemon2: 'Pokemon solid', cursive;
+  --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+  --fonte-pokemon1: 'Pokemon hollow', cursive;
+  --fonte-pokemon2: 'Pokemon solid', cursive;
 }
 
 *{
@@ -28,19 +28,14 @@
 }
 
 body {
-    background-color:var(--cor1);
+    background-color:var(--cor-fundo);
     font-family: var(--fonte-padrão);
-    /*background-image: url('/imagens/pokes.jpg');*/
+    background-image: url('/imagens/pokes.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-  }
   
   nav a {
     color: #ffcc01b9;
@@ -52,8 +47,9 @@ body {
   
   nav a:hover {
     border-radius: 5px;
-    color: var(--cor1);
-    filter: drop-shadow(0 0 10px #FFCC01) drop-shadow(0 0 15px #ffcc01c5);
+    color: var(--cor-fundo);
+    filter: drop-shadow(0 0 5px #FFCC01) drop-shadow(0 0 10px #ffcc01c5);
+    transition: filter 1s;
   }
   
   #logo {
@@ -72,7 +68,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: var(--cor2);
+    background: var(--cor-destaque);
   }
   
   #menu {
@@ -97,7 +93,7 @@ body {
       width: 100%;
       top: 70px;
       right: 0px;
-      background: var(--cor2);
+      background: var(--cor-destaque);
       transition: 0.6s;
       z-index: 1000;
       height: 0px;
@@ -215,16 +211,16 @@ main {
 }
 
 main h1 {
-    color: var(--cor1);
+    color: var(--cor-fundo);
     font-weight: normal;
     font-family: var(--fonte-pokemon2);
     font-size: 1.8em;
-    text-shadow: 1px 1px 5px var(--cor2);
+    text-shadow: 1px 1px 5px var(--cor-destaque);
 }
 
 main h2 {
     font-family: var(--fonte-pokemon2);
-    color: var(--cor1);
+    color: var(--cor-fundo);
     font-size: 1.5em;
     font-weight: normal;
     text-indent: 8px;
@@ -251,8 +247,8 @@ main img.ilust {
 }
 
 footer {
-    background-color: var(--cor2);
-    color: var(--cor1);
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
     font-size: 0.8em;
     width: 100%;
     padding: 15px;
@@ -263,7 +259,7 @@ footer div {
 }
 
 footer a {
-    color: var(--cor1);
+    color: var(--cor-fundo);
     font-weight: bolder;
     text-decoration: none;
 }
@@ -275,11 +271,53 @@ footer a {
 footer a.top {
   border-radius: 4px;
   padding: 10px 21px;
-  background-color: var(--cor1);
+  background-color: var(--cor-fundo);
   color: #2d6ab4c5;
 }
 
 footer a.top:hover {
   text-decoration: none;
-  color: var(--cor2);
+  color: var(--cor-destaque);
+}
+
+/*CAIXA DE COOKIE*/
+
+.cookie {
+  background-color: rgb(218, 218, 218);
+  position: fixed;
+  bottom: 0.1px;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 10px 10px 0px 0px;
+  display: none;
+}
+.cookie.mostrar {
+  display: block;
+}
+
+.cookie .cookie-txt {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.cookie .cookie-btn {
+  margin-left: 30px;
+}
+
+.cookie .cookie-btn button {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cookie .cookie-btn button:hover {
+  transform: scale(0.9);
 }
